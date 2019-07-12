@@ -11,39 +11,71 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-            child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Container(
-              width: 100.0,
-              height: 100.0,
-              color: Colors.red,
-            ),
-            Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.yellow,
-                  ),
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.green,
-                  )
-                ],
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundColor: Colors.red,
+                backgroundImage: AssetImage("images/avatar-1.png"),
               ),
-            ),
-            Container(
-              width: 100.0,
-              height: 100.0,
-              color: Colors.blue,
-            ),
-          ],
-        )),
+              SizedBox(
+                height: 20.0,
+              ),
+              Text(
+                "Rakesh Chandra Dash",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 40.0,
+                    fontFamily: "Sacramento",
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 200.0,
+                child: Divider(
+                  color: Colors.teal.shade50,
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.all(10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.android,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "Developer",
+                    style: TextStyle(
+                        color: Colors.blueGrey,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 5.0,
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.all(10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "prorakesh25956@gmail.com",
+                    style: TextStyle(
+                        color: Colors.blueGrey,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
